@@ -1,0 +1,11 @@
+@use "./colors/slate.scss" as slate;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin border($property: border, $color: slate.$c5) {
+  #{$property}: 1px solid $color;
+}

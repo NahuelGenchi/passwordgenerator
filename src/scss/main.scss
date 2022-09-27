@@ -1,0 +1,16 @@
+@use "./colors/slate.scss" as slate;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  background-color: slate.$c9;
+  color: slate.$c0;
+}
