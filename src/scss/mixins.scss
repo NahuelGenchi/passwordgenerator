@@ -6,6 +6,6 @@
   align-items: center;
 }
 
-@mixin border($property: border, $color: slate.$c5) {
+@mixin border($property: border, $color: slate.$c7) {
   #{$property}: 1px solid $color;
 }

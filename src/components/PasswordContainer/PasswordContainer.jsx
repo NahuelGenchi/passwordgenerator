@@ -1,6 +1,14 @@
+import { useState } from "react";
+
 import "./PasswordContainer.scss";
 
 const PasswordContainer = () => {
+  const [inputValue, setInputValue] = useState(1);
+
+  const handleInput = (e) => {
+    setInputValue(e.target.value);
+  };
+
   return(
     <div className="password-container">
       <h1>Password Generator</h1>
@@ -8,9 +16,9 @@ const PasswordContainer = () => {
       <form className="password-c-form">
         <div>
           <label htmlFor="">Number of characters</label>
-          <input type="number" name="" id="characterAmountNumber" min={1} max={50} value={10}/>
+          <input onChange={handleInput} type="number" name="" id="characterAmountNumber" min={1} max={50} value={inputValue}/>
           <div>
-            <input type="range" name="" id="characterAmountRange" min={1} max={50} value={10}/>
+            <input onInput={handleInput} type="range" name="" id="characterAmountRange" min={1} max={50} value={inputValue}/>
           </div>
         </div>
         <div>
